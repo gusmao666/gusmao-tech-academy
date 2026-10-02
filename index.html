@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Gusmao Tech Academy | Kali Linux Master</title>
+
+<meta name="description"
+content="Kali Linux Master es un ebook digital completo en PDF para aprender Kali Linux, Linux, redes, ciberseguridad, hacking ético, Bash, Python y creación web.">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#05080c;
+    color:#fff;
+    line-height:1.6;
+}
+
+a{
+    text-decoration:none;
+}
+
+.container{
+    width:90%;
+    max-width:1150px;
+    margin:auto;
+}
+
+/* HEADER */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(5,8,12,.95);
+    border-bottom:1px solid #1c2933;
+    backdrop-filter:blur(12px);
+}
+
+nav{
+    max-width:1150px;
+    margin:auto;
+    padding:18px 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    color:#45ff91;
+    font-weight:900;
+    letter-spacing:1px;
+    font-size:20px;
+}
+
+.menu a{
+    color:#d5dde3;
+    margin-left:24px;
+    font-size:14px;
+}
+
+.menu a:hover{
+    color:#45ff91;
+}
+
+/* HERO */
+
+.hero{
+    min-height:92vh;
+    display:flex;
+    align-items:center;
+    text-align:center;
+    padding:80px 20px;
+    background:
+      radial-gradient(circle at 50% 0%,#18472f 0%,#08120e 35%,#05080c 70%);
+}
+
+.hero-content{
+    max-width:950px;
+    margin:auto;
+}
+
+.badge{
+    display:inline-block;
+    border:1px solid #45ff91;
+    color:#45ff91;
+    border-radius:30px;
+    padding:9px 18px;
+    font-size:13px;
+    font-weight:bold;
+    margin-bottom:25px;
+}
+
+.hero h1{
+    font-size:66px;
+    line-height:1.05;
+    margin-bottom:20px;
+}
+
+.green{
+    color:#45ff91;
+}
+
+.product-type{
+    display:inline-block;
+    margin:10px 0 22px;
+    padding:10px 18px;
+    background:#102219;
+    border:1px solid #255b3c;
+    border-radius:8px;
+    color:#c9ffdd;
+    font-weight:bold;
+}
+
+.hero p{
+    max-width:790px;
+    margin:0 auto 25px;
+    color:#aab7c0;
+    font-size:19px;
+}
+
+.warning{
+    max-width:700px;
+    margin:0 auto 28px;
+    font-size:14px !important;
+    color:#75838d !important;
+}
+
+.buttons{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:12px;
+}
+
+.btn{
+    display:inline-block;
+    padding:16px 28px;
+    background:#45ff91;
+    color:#041009;
+    font-weight:900;
+    border-radius:8px;
+    transition:.2s;
+}
+
+.btn:hover{
+    transform:translateY(-2px);
+}
+
+.btn-outline{
+    background:transparent;
+    color:white;
+    border:1px solid #53636e;
+}
+
+/* SECTION */
+
+section{
+    padding:90px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.section-title h2{
+    font-size:42px;
+    margin-bottom:12px;
+}
+
+.section-title p{
+    color:#8d9ba5;
+    max-width:760px;
+    margin:auto;
+}
+
+/* PROMISE */
+
+.promise{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+    background:#0d151a;
+    border:1px solid #24343d;
+    padding:45px;
+    border-radius:18px;
+}
+
+.promise h2{
+    font-size:38px;
+    margin-bottom:20px;
+}
+
+.promise p{
+    color:#a5b2ba;
+    font-size:18px;
+}
+
+/* CARDS */
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.card{
+    background:#0d141a;
+    border:1px solid #1f303b;
+    border-radius:15px;
+    padding:30px;
+}
+
+.card-number{
+    color:#45ff91;
+    font-size:13px;
+    font-weight:bold;
+    margin-bottom:12px;
+}
+
+.card h3{
+    margin-bottom:12px;
+}
+
+.card p{
+    color:#91a0aa;
+}
+
+/* MODULES */
+
+.course{
+    background:#080e13;
+}
+
+.modules{
+    max-width:900px;
+    margin:auto;
+}
+
+.module{
+    display:flex;
+    gap:22px;
+    padding:25px 0;
+    border-bottom:1px solid #1d2a33;
+}
+
+.module-number{
+    min-width:48px;
+    height:48px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:9px;
+    background:#11251b;
+    color:#45ff91;
+    font-weight:bold;
+}
+
+.module p{
+    color:#8997a1;
+}
+
+/* TERMINAL */
+
+.terminal{
+    max-width:850px;
+    margin:55px auto 0;
+    border:1px solid #263640;
+    background:#020405;
+    border-radius:12px;
+    overflow:hidden;
+}
+
+.terminal-top{
+    background:#11181d;
+    padding:12px 18px;
+    color:#7f8b93;
+    font-size:13px;
+}
+
+.terminal-code{
+    padding:25px;
+    color:#45ff91;
+    font-family:monospace;
+    line-height:1.9;
+}
+
+.white{
+    color:#e5edf2;
+}
+
+/* PRICE */
+
+.price-box{
+    max-width:780px;
+    margin:auto;
+    text-align:center;
+    padding:50px;
+    border-radius:20px;
+    border:1px solid #45ff91;
+    background:linear-gradient(145deg,#101a20,#0a1014);
+}
+
+.price-box h2{
+    font-size:38px;
+}
+
+.price{
+    font-size:65px;
+    font-weight:900;
+    color:#45ff91;
+    margin:20px 0;
+}
+
+.pdf-label{
+    font-weight:bold;
+    color:#d7ffe6;
+    margin-bottom:20px;
+}
+
+.features{
+    text-align:left;
+    max-width:530px;
+    margin:30px auto;
+}
+
+.features div{
+    margin:13px 0;
+    color:#d3dde3;
+}
+
+.features b{
+    color:#45ff91;
+}
+
+.buy{
+    width:100%;
+    max-width:520px;
+}
+
+/* FAQ */
+
+.faq{
+    max-width:850px;
+    margin:auto;
+}
+
+.question{
+    padding:25px 0;
+    border-bottom:1px solid #22303a;
+}
+
+.question p{
+    color:#8997a1;
+}
+
+/* LEGAL */
+
+.legal{
+    max-width:900px;
+    margin:auto;
+    padding:25px;
+    border:1px solid #473e1f;
+    background:#161409;
+    border-radius:12px;
+    color:#c9bf91;
+    font-size:14px;
+}
+
+footer{
+    padding:40px 20px;
+    border-top:1px solid #1c2933;
+    text-align:center;
+    color:#6e7d86;
+}
+
+footer strong{
+    color:#45ff91;
+}
+
+@media(max-width:850px){
+
+    .hero h1{
+        font-size:43px;
+    }
+
+    .grid{
+        grid-template-columns:1fr;
+    }
+
+    .menu{
+        display:none;
+    }
+
+    .section-title h2{
+        font-size:32px;
+    }
+
+    .price-box,
+    .promise{
+        padding:35px 20px;
+    }
+
+    .price{
+        font-size:52px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<nav>
+<div class="logo">GUSMAO TECH ACADEMY</div>
+
+<div class="menu">
+<a href="#ebook">El Ebook</a>
+<a href="#contenido">Contenido</a>
+<a href="#temario">Temario</a>
+<a href="#comprar">Comprar</a>
+<a href="#faq">FAQ</a>
+</div>
+</nav>
+</header>
+
+
+<section class="hero" id="ebook">
+
+<div class="hero-content">
+
+<div class="badge">
+FORMACIÓN COMPLETA EN KALI LINUX Y CIBERSEGURIDAD
+</div>
+
+<h1>
+<span class="green">KALI LINUX MASTER</span><br>
+De cero a nivel avanzado
+</h1>
+
+<div class="product-type">
+📘 EBOOK DIGITAL COMPLETO EN PDF
+</div>
+
+<p>
+Una guía práctica y estructurada para aprender Kali Linux,
+Linux, redes, ciberseguridad, hacking ético, pentesting autorizado,
+Bash, Python y creación de páginas web.
+</p>
+
+<p class="warning">
+Este producto es un EBOOK FORMATIVO DIGITAL.
+No es un programa, software ni aplicación.
+</p>
+
+<div class="buttons">
+
+<a href="#comprar" class="btn">
+COMPRAR EBOOK — 19,99 €
+</a>
+
+<a href="#temario" class="btn btn-outline">
+VER TODO EL TEMARIO
+</a>
+
+</div>
+
+</div>
+</section>
+
+
+<section>
+
+<div class="container">
+
+<div class="promise">
+
+<h2>
+De principiante a <span class="green">usuario avanzado</span>
+</h2>
+
+<p>
+Kali Linux Master está diseñado para llevarte paso a paso desde los
+fundamentos hasta conocimientos avanzados de Linux y ciberseguridad.
+No necesitas experiencia previa.
+</p>
+
+<br>
+
+<p>
+Si estudias los capítulos, ejecutas los comandos, construyes los
+laboratorios y completas los ejercicios, desarrollarás una base sólida
+para desenvolverte con Kali Linux y continuar hacia una carrera
+profesional en ciberseguridad.
+</p>
+
+</div>
+
+</div>
+</section>
+
+
+<section id="contenido">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>
+¿Qué contiene este <span class="green">ebook?</span>
+</h2>
+
+<p>
+No queremos que sea un PDF lleno de teoría.
+La idea es aprender utilizando Kali Linux mientras avanzas.
+</p>
+
+</div>
+
+<div class="grid">
+
+<div class="card">
+<div class="card-number">01</div>
+<h3>🐧 Kali Linux completo</h3>
+<p>
+Instalación, configuración, escritorio, terminal,
+sistema de archivos, paquetes, procesos, usuarios y permisos.
+</p>
+</div>
+
+<div class="card">
+<div class="card-number">02</div>
+<h3>🌐 Redes desde cero</h3>
+<p>
+IP, subredes, routers, TCP, UDP, DNS, HTTP,
+HTTPS, puertos y servicios.
+</p>
+</div>
+
+<div class="card">
+<div class="card-number">03</div>
+<h3>🛡️ Hacking ético</h3>
+<p>
+Metodologías y fundamentos de pentesting
+aplicados a entornos propios y autorizados.
+</p>
+</div>
+
+<div class="card">
+<div class="card-number">04</div>
+<h3>🔎 Herramientas de Kali</h3>
+<p>
+Aprenderás cómo funcionan herramientas de análisis
+y cuándo utilizarlas correctamente.
+</p>
+</div>
+
+<div class="card">
+<div class="card-number">05</div>
+<h3>📡 Wireshark</h3>
+<p>
+Analiza tráfico de tus laboratorios y aprende
+cómo viajan los datos por una red.
+</p>
+</div>
+
+<div class="card">
+<div class="card-number">06</div>
+<h3>💻 Bash</h3>
+<p>
+Automatiza tareas y aprende scripting
+para trabajar de forma más eficiente.
+</p>
+</div>
+
+<div class="card">
+<div class="card-number">07</div>
+<h3>🐍 Python</h3>
+<p>
+Aprende fundamentos de programación
+y desarrolla pequeñas herramientas propias.
+</p>
+</div>
+
+<div class="card">
+<div class="card-number">08</div>
+<h3>🌍 Creación web</h3>
+<p>
+HTML, CSS, estructura de páginas,
+publicación y dominio web.
+</p>
+</div>
+
+<div class="card">
+<div class="card-number">09</div>
+<h3>🧪 Laboratorio práctico</h3>
+<p>
+Configura máquinas virtuales para practicar
+sin utilizar sistemas de terceros.
+</p>
+</div>
+
+<div class="card">
+<div class="card-number">10</div>
+<h3>🔐 Seguridad defensiva</h3>
+<p>
+Aprende a identificar riesgos,
+proteger sistemas y aplicar buenas prácticas.
+</p>
+</div>
+
+<div class="card">
+<div class="card-number">11</div>
+<h3>⌨️ Comandos reales</h3>
+<p>
+Ejemplos reales de terminal explicados
+paso a paso y con contexto.
+</p>
+</div>
+
+<div class="card">
+<div class="card-number">12</div>
+<h3>🏆 Proyecto final</h3>
+<p>
+Construye y analiza tu propio laboratorio
+y documenta el trabajo realizado.
+</p>
+</div>
+
+</div>
+
+
+<div class="terminal">
+
+<div class="terminal-top">
+student@kali:~$
+</div>
+
+<div class="terminal-code">
+
+<span class="white">$</span> whoami<br>
+student<br><br>
+
+<span class="white">$</span> ip addr<br>
+<span class="white"># Consultar interfaces de red</span><br><br>
+
+<span class="white">$</span> ip route<br>
+<span class="white"># Consultar las rutas del sistema</span><br><br>
+
+<span class="white">$</span> ss -tulpn<br>
+<span class="white"># Revisar servicios de tu propio equipo</span>
+
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<section class="course" id="temario">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>
+Temario <span class="green">completo</span>
+</h2>
+
+<p>
+Una ruta de aprendizaje organizada desde cero.
+</p>
+
+</div>
+
+<div class="modules">
+
+<div class="module">
+<div class="module-number">01</div>
+<div>
+<h3>Introducción a la ciberseguridad</h3>
+<p>Conceptos fundamentales, ética y uso responsable.</p>
+</div>
+</div>
+
+<div class="module">
+<div class="module-number">02</div>
+<div>
+<h3>Instalación de Kali Linux</h3>
+<p>Instalación física y mediante VirtualBox.</p>
+</div>
+</div>
+
+<div class="module">
+<div class="module-number">03</div>
+<div>
+<h3>Dominando la terminal</h3>
+<p>Comandos, archivos, procesos, servicios y paquetes.</p>
+</div>
+</div>
+
+<div class="module">
+<div class="module-number">04</div>
+<div>
+<h3>Usuarios y permisos Linux</h3>
+<p>Administración y seguridad del sistema.</p>
+</div>
+</div>
+
+<div class="module">
+<div class="module-number">05</div>
+<div>
+<h3>Redes informáticas</h3>
+<p>IP, TCP/IP, DNS, puertos, protocolos y subredes.</p>
+</div>
+</div>
+
+<div class="module">
+<div class="module-number">06</div>
+<div>
+<h3>Análisis de redes</h3>
+<p>Diagnóstico y descubrimiento en laboratorios autorizados.</p>
+</div>
+</div>
+
+<div class="module">
+<div class="module-number">07</div>
+<div>
+<h3>Wireshark</h3>
+<p>Análisis de tráfico y protocolos.</p>
+</div>
+</div>
+
+<div class="module">
+<div class="module-number">08</div>
+<div>
+<h3>Vulnerabilidades</h3>
+<p>Cómo identificar, clasificar, explicar y corregir fallos.</p>
+</div>
+</div>
+
+<div class="module">
+<div class="module-number">09</div>
+<div>
+<h3>Pentesting ético</h3>
+<p>Metodología aplicada a laboratorios y sistemas autorizados.</p>
+</div>
+</div>
+
+<div class="module">
+<div class="module-number">10</div>
+<div>
+<h3>Bash scripting</h3>
+<p>Automatización de tareas y administración.</p>
+</div>
+</div>
+
+<div class="module">
+<div class="module-number">11</div>
+<div>
+<h3>Python</h3>
+<p>Programación básica aplicada a tareas defensivas.</p>
+</div>
+</div>
+
+<div class="module">
+<div class="module-number">12</div>
+<div>
+<h3>Creación de páginas web</h3>
+<p>HTML, CSS, publicación y dominios.</p>
+</div>
+</div>
+
+<div class="module">
+<div class="module-number">13</div>
+<div>
+<h3>Seguridad web</h3>
+<p>Principios para construir y proteger aplicaciones web.</p>
+</div>
+</div>
+
+<div class="module">
+<div class="module-number">14</div>
+<div>
+<h3>Hardening y defensa</h3>
+<p>Cómo reducir riesgos y reforzar sistemas.</p>
+</div>
+</div>
+
+<div class="module">
+<div class="module-number">15</div>
+<div>
+<h3>Informes profesionales</h3>
+<p>Cómo documentar hallazgos y recomendaciones.</p>
+</div>
+</div>
+
+<div class="module">
+<div class="module-number">16</div>
+<div>
+<h3>Proyecto final</h3>
+<p>Laboratorio completo con análisis, defensa y documentación.</p>
+</div>
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<section id="comprar">
+
+<div class="container">
+
+<div class="price-box">
+
+<div class="badge">
+PRODUCTO DIGITAL
+</div>
+
+<h2>
+Kali Linux Master
+</h2>
+
+<div class="pdf-label">
+📘 EBOOK DIGITAL COMPLETO EN PDF
+</div>
+
+<div class="price">
+19,99 €
+</div>
+
+<p>
+Compra única. Recibirás el ebook digital después de confirmar el pago.
+</p>
+
+<div class="features">
+
+<div><b>✓</b> Kali Linux desde cero</div>
+<div><b>✓</b> Contenido progresivo hasta nivel avanzado</div>
+<div><b>✓</b> Comandos reales y explicados</div>
+<div><b>✓</b> Redes y protocolos</div>
+<div><b>✓</b> Hacking ético y pentesting autorizado</div>
+<div><b>✓</b> Wireshark y análisis</div>
+<div><b>✓</b> Bash y Python</div>
+<div><b>✓</b> Creación de páginas web</div>
+<div><b>✓</b> Laboratorios prácticos</div>
+<div><b>✓</b> Seguridad defensiva</div>
+<div><b>✓</b> Ejercicios</div>
+<div><b>✓</b> Proyecto final</div>
+<div><b>✓</b> Contacto por WhatsApp</div>
+
+</div>
+
+<a
+href="https://pay.hotmart.com/Q107867480H"
+target="_blank"
+class="btn buy">
+
+COMPRAR EBOOK DIGITAL — 19,99 €
+
+</a>
+
+</div>
+
+</div>
+</section>
+
+
+<section id="faq">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>Preguntas <span class="green">frecuentes</span></h2>
+
+</div>
+
+<div class="faq">
+
+<div class="question">
+<h3>¿Qué estoy comprando?</h3>
+<p>
+Un ebook formativo digital en formato PDF.
+No estás comprando un programa ni una aplicación.
+</p>
+</div>
+
+<div class="question">
+<h3>¿Sirve para principiantes?</h3>
+<p>
+Sí. Empieza desde los fundamentos y aumenta progresivamente la dificultad.
+</p>
+</div>
+
+<div class="question">
+<h3>¿Me convertiré automáticamente en profesional?</h3>
+<p>
+El ebook proporciona una ruta amplia de aprendizaje,
+pero tu nivel dependerá del estudio, la práctica y la experiencia
+que desarrolles realizando los laboratorios y ejercicios.
+</p>
+</div>
+
+<div class="question">
+<h3>¿Incluye código y comandos reales?</h3>
+<p>
+Sí. Incluye ejemplos reales, explicados y utilizados
+en contextos educativos y autorizados.
+</p>
+</div>
+
+<div class="question">
+<h3>¿Aprenderé hacking?</h3>
+<p>
+Aprenderás hacking ético y fundamentos de pentesting
+para laboratorios, equipos propios y sistemas donde tengas autorización.
+</p>
+</div>
+
+<div class="question">
+<h3>¿Cómo recibo el ebook?</h3>
+<p>
+Después de confirmar la compra recibirás el producto digital.
+</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<section>
+
+<div class="container">
+
+<div class="legal">
+
+<strong>Uso responsable:</strong>
+
+El contenido de Gusmao Tech Academy tiene fines educativos.
+Las técnicas de seguridad deben utilizarse únicamente sobre equipos propios,
+laboratorios diseñados para formación o sistemas para los que exista
+autorización expresa.
+
+</div>
+
+</div>
+</section>
+
+
+<footer>
+
+<strong>GUSMAO TECH ACADEMY</strong>
+
+<br><br>
+
+Linux · Kali Linux · Ciberseguridad · Programación · Desarrollo Web
+
+<br><br>
+
+© 2026 Gusmao Tech Academy
+
+</footer>
+
+</body>
+</html>
